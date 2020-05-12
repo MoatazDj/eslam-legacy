@@ -12,12 +12,12 @@
 
 ## Table of Contents
 
-- Usage
-- Requirements
-- Development
-- Installing Dependencies
-- DatabaseSchema
-- Team
+1. [Usage](https://github.com/Eslam-legacy-project/eslam-legacy#usage)
+2. [Requirements](https://github.com/Eslam-legacy-project/eslam-legacy#requirements)
+3. [Development](https://github.com/Eslam-legacy-project/eslam-legacy#development)
+    - [Installing Dependencies](https://github.com/Eslam-legacy-project/eslam-legacy#installing-dependencies)
+4. [DatabaseSchema](https://github.com/Eslam-legacy-project/eslam-legacy#databaseschema)
+5. [Team](https://github.com/Eslam-legacy-project/eslam-legacy#team)
 
 
 ## Usage
