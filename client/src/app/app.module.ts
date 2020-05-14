@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { CalendarComponent } from './calendar/calendar.component';
-
+import { CalendarModule, IslamicService } from '@syncfusion/ej2-angular-calendars';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,9 +20,10 @@ import { CalendarComponent } from './calendar/calendar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
-  providers: [],
+  providers: [IslamicService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
