@@ -14,6 +14,7 @@ app.use(bodyparser.urlencoded({extended : true}));
 
 app.use('/auth', routes.auth);
 app.use('/verses', routes.verses);
+app.use('/favourites', routes.favourites)
 
 
 
