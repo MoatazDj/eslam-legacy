@@ -4,11 +4,11 @@
 
 ## Team
 
-- Product Owner: [Moataz Djebali](https://github.com/MoatazDj)
+- __Product Owner__: [Moataz Djebali](https://github.com/MoatazDj)
 
-- Scrum Master: [Amir Ben Youssef](https://github.com/amirby)
+- __Scrum Master__: [Amir Ben Youssef](https://github.com/amirby)
 
-- Development Team Members: [Mohamed Zemzemi](https://github.com/zamzoum94), [Wala Abdaoui](https://github.com/Bouabda)
+- __Development__ Team Members: [Mohamed Zemzemi](https://github.com/zamzoum94), [Wala Abdaoui](https://github.com/Bouabda)
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@
 
 ## Usage
 
-Through our web application, users can easily:
+>Through our web application, __users__ can easily:
 
 - Sign Up and login.
 
