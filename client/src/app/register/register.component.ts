@@ -18,4 +18,7 @@ export class RegisterComponent implements OnInit {
     password : '',
     gender : ''
   }
+  onSubmit(f){ 
+    console.log(f);
+  }
 }

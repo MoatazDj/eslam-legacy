@@ -15,4 +15,7 @@ export class LoginComponent implements OnInit {
     email : '',
     password : ''
   }
+  onSubmit(f){ 
+    console.log(f);
+  }
 }

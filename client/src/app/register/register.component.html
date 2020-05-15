@@ -1,38 +1,42 @@
-<div class="form-group">
-    <label for="firstName">First name</label>
-    <input type="text" class="form-control" [(ngModel)]="user.firstName"/>
-</div>
-<div class="form-group">
-    <label for="lastName">Last name</label>
-    <input type="text" class="form-control"  [(ngModel)]="user.lastName">
-  </div>
-<div class="form-group">
-  <label for="email">Email address</label>
-  <input type="email" class="form-control" aria-describedby="emailHelp"  [(ngModel)]='user.email'>
-</div>
-<div class="form-group">
-  <label for="password">Password</label>
-  <input type="password" class="form-control"  [(ngModel)]='user.password'>
-</div>
-<div class="form-group form-check">
-    <div class="row">
-        <div class="col-md-3">
-            <label for='gender'>Genre</label>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group" ngModelGroup="user">
+        <div class="form-group">
+            <label for="firstName">First name</label>
+            <input type="text" class="form-control" ngModel name="firstName" required>
         </div>
-        <div class="col-md">
+        <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" class="form-control"  ngModel name="lastName" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" aria-describedby="emailHelp"  ngModel name="email" required email>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control"  ngModel name='password'required minlength="6">
+        </div>
+        <div class="form-group form-check">
             <div class="row">
-                <div class="col-md">
-                    <input type="radio" class="form-check-input" name="gender" value="male" [(ngModel)] = "user.gender">
-                    <label class="form-check-label" for="male">Male</label>
+                <div class="col-md-3">
+                    <label for='gender'>Gender</label>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-md">
-                    <input type="radio" class="form-check-input" name="gender" value="female" [(ngModel)] = "user.gender">
-                    <label class="form-check-label" for="female">Female</label>
+                    <div class="row">
+                        <div class="col-md">
+                            <input type="radio" class="form-check-input" name="gender" value="male" ngModel required>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md">
+                            <input type="radio" class="form-check-input" name="gender" value="female" ngModel>
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<button type="submit" class="btn btn-primary">Register</button>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>

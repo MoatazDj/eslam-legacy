@@ -1,9 +1,11 @@
+<form class="form-group" #f="ngForm" (ngSubmit)="onSubmit(f)">
 <div class="form-group">
   <label for="email">Email address</label>
-  <input type="email" class="form-control" name="email" aria-describedby="emailHelp" [(ngModel)] = 'user.email'>
+  <input type="email" class="form-control" aria-describedby="emailHelp"  ngModel name="email" required email>
 </div>
 <div class="form-group">
   <label for="password">Password</label>
-  <input type="password" class="form-control" id="password" [(ngModel)] ='user.password'>
+  <input type="password" class="form-control"  ngModel name='password'required minlength="6">
 </div>
 <button type="submit" class="btn btn-primary">Login</button>
+</form>
