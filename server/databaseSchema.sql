@@ -106,5 +106,5 @@ INSERT INTO users (user_first_name,	user_last_name ,email,gender,phone_number, p
  VALUES
  ("user1",'USER1','user@gmail.com','male',123456, 123);
 /*  Execute this file from the command line by typing:
- *    mysql -u root -p < schema.sql
+ *    mysql -u root -p < server/databaseSchema.sql
  *  to create the database and the tables.*/

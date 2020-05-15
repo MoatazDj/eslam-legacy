@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'client';
+  
+  constructor(private httpClient:HttpClient){
+    this.httpClient.get("http://api.mp3quran.net/radios/radio_english.json").subscribe(data => { 
+      console.log(data);
+    })
+  }
   
 }

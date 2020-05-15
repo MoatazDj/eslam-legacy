@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-register',
@@ -7,18 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
   }
   user = {
-    firstName : '',
-    lastName : '',
+    first_name : '',
+    last_name : '',
     email : '',
     password : '',
     gender : ''
   }
-  onSubmit(f){ 
-    console.log(f);
+  onSubmit(data:any) :void { 
+    let user = data.user; 
+    console.log(user);
+    console.log( this.httpClient.post<any>('http://localhost:8200/auth/signup', user).subscribe(res => console.log(res)))
   }
 }
