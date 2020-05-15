@@ -8,10 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   
-  constructor(private httpClient:HttpClient){
-    this.httpClient.get("http://api.mp3quran.net/radios/radio_english.json").subscribe(data => { 
-      console.log(data);
-    })
+  constructor(){
+   
+    }
   }
   
-}
+

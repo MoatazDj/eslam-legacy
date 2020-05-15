@@ -16,6 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { StatesComponent } from './states/states.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RadioComponent } from './radio/radio.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     ProfileComponent,
     StatesComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    RadioComponent
   ],
   imports: [
     BrowserModule,
