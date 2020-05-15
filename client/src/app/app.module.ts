@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { StatesComponent } from './states/states.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    FormsModule,
+    HttpClientModule
   ],
   providers: [IslamicService],
   bootstrap: [AppComponent]

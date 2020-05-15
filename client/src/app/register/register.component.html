@@ -1,40 +1,38 @@
-<form>
-    <div class="form-group">
-        <label for="firstName">First name</label>
-        <input type="email" class="form-control" name="firstName">
-    </div>
-    <div class="form-group">
-        <label for="lastName">Last name</label>
-        <input type="email" class="form-control" name="lastName">
-      </div>
-    <div class="form-group">
-      <label for="email">Email address</label>
-      <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
-    </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password">
-    </div>
-    <div class="form-group form-check">
-        <div class="row">
-            <div class="col-md-3">
-                <label for='genre'>Genre</label>
-            </div>
-            <div class="col-md">
-                <div class="row">
-                    <div class="col-md">
-                        <input type="checkbox" class="form-check-input" name="male">
-                        <label class="form-check-label" for="male">Male</label>
-                    </div>
+<div class="form-group">
+    <label for="firstName">First name</label>
+    <input type="text" class="form-control" [(ngModel)]="user.firstName"/>
+</div>
+<div class="form-group">
+    <label for="lastName">Last name</label>
+    <input type="text" class="form-control"  [(ngModel)]="user.lastName">
+  </div>
+<div class="form-group">
+  <label for="email">Email address</label>
+  <input type="email" class="form-control" aria-describedby="emailHelp"  [(ngModel)]='user.email'>
+</div>
+<div class="form-group">
+  <label for="password">Password</label>
+  <input type="password" class="form-control"  [(ngModel)]='user.password'>
+</div>
+<div class="form-group form-check">
+    <div class="row">
+        <div class="col-md-3">
+            <label for='gender'>Genre</label>
+        </div>
+        <div class="col-md">
+            <div class="row">
+                <div class="col-md">
+                    <input type="radio" class="form-check-input" name="gender" value="male" [(ngModel)] = "user.gender">
+                    <label class="form-check-label" for="male">Male</label>
                 </div>
-                <div class="row">
-                    <div class="col-md">
-                        <input type="checkbox" class="form-check-input" name="female">
-                        <label class="form-check-label" for="female">Female</label>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <input type="radio" class="form-check-input" name="gender" value="female" [(ngModel)] = "user.gender">
+                    <label class="form-check-label" for="female">Female</label>
                 </div>
             </div>
         </div>
     </div>
-    <button type="submit" class="btn btn-primary">Register</button>
-  </form>
+</div>
+<button type="submit" class="btn btn-primary">Register</button>

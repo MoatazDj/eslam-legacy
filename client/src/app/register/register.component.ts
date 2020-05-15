@@ -11,5 +11,11 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  user = {
+    firstName : '',
+    lastName : '',
+    email : '',
+    password : '',
+    gender : ''
+  }
 }
