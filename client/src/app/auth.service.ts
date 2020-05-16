@@ -23,7 +23,7 @@ export class AuthService {
 
   setId(id){
     this.id = id;
-    localStorage.setItem('token', id);
+    localStorage.setItem('id', id);
   }
 
 }

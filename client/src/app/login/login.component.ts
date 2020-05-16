@@ -29,7 +29,10 @@ export class LoginComponent implements OnInit {
       body : JSON.stringify(user) 
     })
     .then(res => {return res.json()})
-    .then(data => {this.authService.setToken(data.token)})
+    .then(data => {
+      this.authService.setToken(data.token)
+      this.authService.setId(data.user_id)
+    })
     .catch(err =>{console.log(err)})
   }
 }

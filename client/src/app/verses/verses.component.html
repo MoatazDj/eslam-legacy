@@ -1,1 +1,3 @@
-<p>verses works!</p>
+<div *ngFor = "let verse of verses">
+    <img src="http://api.mp3quran.net/ayah_image/{{verse.surah_number}}{{verse.verse_number}}.png">
+</div>

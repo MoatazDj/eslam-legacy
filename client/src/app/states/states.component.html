@@ -5,7 +5,7 @@
       <div class="card" style="width:400px">
          <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
          <div class="card-body">
-          <a href="#" class="btn btn-primary">Angry</a>
+          <button  class="btn btn-primary" (click)="getState('angry')">Angry</button>
          </div>
       </div>
     </div>
@@ -40,5 +40,5 @@
 </div>
 
 <div class="container">
-    <app-verses></app-verses>
+    <app-verses [verses] = "verses"></app-verses>
 </div>
