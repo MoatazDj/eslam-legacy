@@ -19,5 +19,4 @@ export class FavoritesComponent implements OnInit {
     console.log( this.http.get<any>('http://localhost:8200/favourites', user_id)
     .subscribe(res => console.log(res)))
   }
-
 }
