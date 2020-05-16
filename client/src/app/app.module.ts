@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
@@ -17,6 +18,7 @@ import { StatesComponent } from './states/states.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RadioComponent } from './radio/radio.component';
+import { PartnerComponent } from './partner/partner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { RadioComponent } from './radio/radio.component';
     ProfileComponent,
     StatesComponent,
     FavoritesComponent,
-    RadioComponent
+    RadioComponent,
+    PartnerComponent
   ],
   imports: [
     BrowserModule,
