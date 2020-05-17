@@ -123,10 +123,6 @@
   },
   "defaultProject": "client",
   "cli": {
-<<<<<<< HEAD
-    "analytics": "87cc7f06-9600-449a-b7e3-985db350a460"
-=======
     "analytics": "c6358978-0da5-437c-8df3-d03f091f9fb3"
->>>>>>> 6eb93de3994a5777b4137b86f79cb5d3fcaf4ed6
   }
 }
