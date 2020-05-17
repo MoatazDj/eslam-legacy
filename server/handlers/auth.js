@@ -80,9 +80,9 @@ exports.signin = async (req, res, next) => {
                         res.status(404).send('not valid password');
                     } else {              
                             console.log('Correct credientials');
-                            const {user_id, email} = user[0];
-                            const token = jwt.sign({user_id, email}, process.env.SECRET);
-                            res.status(200).json({user_id, email, token})
+                            const {user_id, email, gender} = user[0];
+                            const token = jwt.sign({user_id, email, gender}, process.env.SECRET);
+                            res.status(200).json({user_id, email, gender, token})
                         } 
                     }
                 }
