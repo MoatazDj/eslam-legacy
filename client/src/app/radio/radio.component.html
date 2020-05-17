@@ -1,1 +1,7 @@
-<p>radio works!</p>
+<div *ngFor = "let radio of radios">
+    <div class="row">
+        <mat-basic-audio-player audioUrl= {{radio.radio_url}} title={{radio.name}} 
+            [displayTitle]="radio.name" [displayVolumeControls]="msbapDisplayVolumeControls" >
+            </mat-basic-audio-player>
+    </div>
+</div>

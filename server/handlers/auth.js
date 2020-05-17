@@ -1,5 +1,5 @@
 const connection = require ('../database/index');
-const bcrypt = require ('bcrypt');
+const bcrypt = require ('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 exports.signup = async (req, res, next) => {
@@ -52,7 +52,6 @@ exports.signup = async (req, res, next) => {
     catch(e)
         {
                 res.send(e)
-            
         }
 };
 

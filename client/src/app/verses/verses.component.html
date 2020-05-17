@@ -1,1 +1,12 @@
-<p>verses works!</p>
+<div *ngFor = "let verse of verses">
+    <div class="row">
+        <div class="col-md-6">
+            <img style="width: 100%;" src="http://api.mp3quran.net/ayah_image/{{verse.surah_number}}{{verse.verse_number}}.png">
+            <mat-basic-audio-player audioUrl= "https://verse.mp3quran.net/arabic/ibrahim_alakhdar/32/{{verse.surah_number}}{{verse.verse_number}}.mp3" [title]="msbapTitle" 
+            [displayTitle]="msbapDisplayTitle" [displayVolumeControls]="msbapDisplayVolumeControls" >
+            </mat-basic-audio-player>
+            <button (click)='addFavorite(verse.verse_id)'>Add to favorites</button>
+        </div>
+    </div>
+</div>
+
