@@ -15,7 +15,20 @@ export class FavoritesComponent implements OnInit {
   ngOnInit(){
   }
 
-  deleteFavorite(){
-
-  }
+//   deleteFavorite(){
+//     let verse ={
+//       verse_id : id,
+//       user_id : this.authService.getId()
+//    }  
+//    fetch(`http://localhost:8200/favourites/${this.user_id}` ,{
+//     method : 'GET',
+//     headers : {
+//       'content-type':'application/json',
+//     },
+//   })
+//   .then(res => {return res.json()})
+//   .then(data => {this.favorites = data})
+//   .catch(err =>{console.log(err)})
+// }
 }
+
