@@ -1,1 +1,11 @@
-<p>favorites works!</p>
+<div *ngFor = "let favorite of favorites">
+    <div class="row">
+        <div class="col-md-6">
+            <img style="width: 100%;" src="http://api.mp3quran.net/ayah_image/{{favorite.surah_number}}{{favorite.verse_number}}.png">
+            <mat-basic-audio-player audioUrl= "https://verse.mp3quran.net/arabic/ibrahim_alakhdar/32/{{favorite.surah_number}}{{favorite.verse_number}}.mp3" [title]="msbapTitle" 
+            [displayTitle]="msbapDisplayTitle" [displayVolumeControls]="msbapDisplayVolumeControls" >
+            </mat-basic-audio-player>
+            <button (click) = "deleteFavorite()"></button>
+        </div>
+    </div>
+</div>

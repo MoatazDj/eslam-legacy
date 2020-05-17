@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
+import { AuthService } from '../auth.service';
 @Component({
   selector: 'app-verses',
   templateUrl: './verses.component.html',
@@ -9,17 +10,28 @@ import { Input } from '@angular/core';
 export class VersesComponent implements OnInit {
   @Input() verses;
   msbapTitle = 'Audio Title';
-  msbapAudioUrl = "https://verse.mp3quran.net/arabic/ibrahim_alakhdar/32/{{verse.surah_number}}{{verse.verse_number}}.mp3";   
   msbapDisplayTitle = false; 
   msbapDisplayVolumeControls = true;
-  constructor() { }
+  constructor( private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  player(id){
-    let audio = <HTMLVideoElement> document.getElementById(id);
-    audio.load();
-    audio.play();
+ addFavorite(id){
+   let verse ={
+      verse_id : id,
+      user_id : this.authService.getId()
+   }  
+    fetch('http://localhost:8200/verses', {
+      method : 'POST',
+      headers : {
+        'content-type':'application/json',
+      },
+      body : JSON.stringify(verse) 
+    })
+    .then(res => {return res.json()})
+    .then(data => {console.log(data)})
+    .catch(err =>{console.log(err)})
+  }
  }
-}
+
