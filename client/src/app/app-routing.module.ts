@@ -6,7 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { HomeComponent } from './home/home.component';
-
+import { PrayerTimeComponent } from './prayer-time/prayer-time.component'
 const routes: Routes = [
   {path: '', component:HomeComponent},
   {path : 'radio', component: RadioComponent},
@@ -14,6 +14,7 @@ const routes: Routes = [
   {path:'register',component: RegisterComponent},
   {path:'profile',component: ProfileComponent},
   {path:'favorites',component: FavoritesComponent},
+  {path: 'prayer', component: PrayerTimeComponent}
 ];
 
 @NgModule({

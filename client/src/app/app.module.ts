@@ -21,6 +21,7 @@ import { RadioComponent } from './radio/radio.component';
 import { PartnerComponent } from './partner/partner.component';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrayerTimeComponent } from './prayer-time/prayer-time.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     StatesComponent,
     FavoritesComponent,
     RadioComponent,
-    PartnerComponent
+    PartnerComponent,
+    PrayerTimeComponent
   ],
   imports: [
     BrowserModule,

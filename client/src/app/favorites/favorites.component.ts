@@ -30,5 +30,8 @@ export class FavoritesComponent implements OnInit {
 //   .then(data => {this.favorites = data})
 //   .catch(err =>{console.log(err)})
 // }
+  deleteFavorite(){
+    
+  }
 }
 
