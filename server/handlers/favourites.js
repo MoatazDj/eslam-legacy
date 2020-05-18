@@ -20,9 +20,10 @@ exports.getFavourite= async (req, res, next) => {
 
 exports.deleteFavourite= async (req, res, next) => {
     try{
-        const {id}= req.params
-        var deletefromFavorites = 'DELETE FROM users_verses WHERE state_verse_id = ? '
-        connection.query(deletefromFavorites, id, (error, result) => {
+        const user_id = req.body.user_id;
+        const {id}= req.params;
+        var deletefromFavorites = 'DELETE FROM users_verses WHERE verse_id = ? AND user_id = ? '
+        connection.query(deletefromFavorites, [id, user_id], (error, result) => {
             if (error) res.status(404).json('favorite not found')
             res.status(202).json(result)
         })

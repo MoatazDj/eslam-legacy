@@ -1,39 +1,30 @@
-<form class="form-inline">
-    <div class="form-group">
-      <div class="input-group">
-        <input class="form-control" placeholder="yyyy-mm-dd"
-               name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-        <div class="input-group-append">
-          <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
-        </div>
-      </div>
-    </div>
-</form>
-<div *ngFor = "let prayer of prayers">
+<ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" (click)="getPrayerTime()"></ngb-datepicker>
+
+<div *ngIf = "prayers">
         <div id="prayerDivContainer">
             <div class="prayerDiv">
               <h4> Fajr:</h4>
-              <p>{{prayer.timings.Fajr}}</p>
+              <p>{{prayers.timings.Fajr}}</p>
             </div>
             <div class="prayerDiv">
               <h4>Sunrise:</h4>
-              <p>{{prayer.timings.Sunrise}}</p>
+              <p>{{prayers.timings.Sunrise}}</p>
             </div>
             <div class="prayerDiv">
               <h4>Dhuhr:</h4>
-              <p>{{prayer.timings.Dhuhr}}</p>
+              <p>{{prayers.timings.Dhuhr}}</p>
             </div>
             <div class="prayerDiv">
               <h4>Asr:</h4>
-              <p>{{prayer.timings.Asr}}</p>
+              <p>{{prayers.timings.Asr}}</p>
             </div>
             <div class="prayerDiv">
               <h4>Maghrib:</h4>
-              <p>{{prayer.timings.Maghrib}}</p>
+              <p>{{prayers.timings.Maghrib}}</p>
             </div>
             <div class="prayerDiv">
               <h4>Isha:</h4>
-              <p>{{prayer.timings.Isha}}</p>
+              <p>{{prayers.timings.Isha}}</p>
             </div>
           </div>
 </div>
