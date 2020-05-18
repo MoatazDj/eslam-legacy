@@ -5,8 +5,12 @@
     </a>
     </div>
   <p>Eslamo Copyright</p>
-  <form class="form-inline">Get deals:
+  <h2>Donation</h2>
+  <input [(ngModel)]="amount" type="text"/><br><br>
+  <button type="submit" (click)='proceedPayment()'>Donate</button>    
+  <form class="form-inline">Get Newsletter:
     <input type="email" class="form-control" id="footersub" size="50" placeholder="Email Address">
     <button type="button" class="btn btn-danger subtn">Subscribe</button>
   </form>
+  
 </footer>
