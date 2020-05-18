@@ -5,7 +5,7 @@ const handler = require ('../handlers')
 
 
 router.get('/:id', handler.getFavourite);
-router.delete('/:id', auth, handler.deleteFavourite);
+router.delete('/:id', handler.deleteFavourite);
 
 
 module.exports = router;
