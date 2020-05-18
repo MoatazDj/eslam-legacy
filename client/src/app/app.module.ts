@@ -22,6 +22,7 @@ import { PartnerComponent } from './partner/partner.component';
 import { NgxAudioPlayerModule } from 'ngx-audio-player';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrayerTimeComponent } from './prayer-time/prayer-time.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { PrayerTimeComponent } from './prayer-time/prayer-time.component';
     FormsModule,
     HttpClientModule,
     NgxAudioPlayerModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [IslamicService],
   bootstrap: [AppComponent]

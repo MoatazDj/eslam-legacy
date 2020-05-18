@@ -1,0 +1,33 @@
+.prayerDiv {
+    display: inline-block;
+    width: 13%;
+    height: 4%;
+    margin: 0.5%;
+    padding: 15px;
+    font-size: 25px;
+    background-image: url("https://i.ibb.co/f4xtgc1/prayer2.jpg");
+    background-size: cover;
+    box-shadow: 1px 1px 3px rgb(139, 99, 61);
+    border-radius: 10px;
+    text-align: center;
+}
+
+p {
+    margin-top: -20%;
+    color: #4d005c;
+    font-weight: bold;
+
+}
+
+h4 {
+    margin-top: 40%;
+    text-align: center;
+    color: #4d005c;
+}
+
+#prayerDivContainer {
+    /*background-color: beige;*/
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 50px;
+}
