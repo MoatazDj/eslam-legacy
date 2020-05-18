@@ -2,6 +2,13 @@ const connection = require ('../database/index');
 const bcrypt = require ('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+/**
+ * @function {signup}-will save the user information into the database
+ * @param {req}-request recived from the client side
+ * @param {res}-response that will be send to the client side after checking the database
+ * @param {next}
+ */
+
 exports.signup = async (req, res, next) => {
     try{
         const user = {
@@ -54,6 +61,13 @@ exports.signup = async (req, res, next) => {
                 res.send(e)
         }
 };
+
+/**
+ * @function {signin}-will receive the user info from the database and check if he exists or nah
+ * @param {req}-request recived from the client side
+ * @param {res}-response that will be send to the client side after checking the database
+ * @param {next}
+ */
 
 exports.signin = async (req, res, next) => {
     try{

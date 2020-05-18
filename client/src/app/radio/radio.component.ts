@@ -11,6 +11,12 @@ export class RadioComponent implements OnInit {
   msbapDisplayVolumeControls = true;
   radios;
 
+  /**
+   * @constructor - will get the radio data from the api
+   * @param httpClient - Httpclient service
+   * @returns {this.radio}
+   */
+
   constructor(private httpClient:HttpClient){
     this.httpClient.get("http://api.mp3quran.net/radios/radio_english.json").subscribe(data => { 
       this.radios = data["radios"].slice(0, 5);

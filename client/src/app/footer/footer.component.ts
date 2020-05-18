@@ -13,6 +13,12 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * @function {proceedPayment}-will send the amount that the user selected in the input and then will redirect him to the paypal page
+   * @param {void}
+   * @returns {void}
+   */
+
   proceedPayment(){
     let amount = {amount : this.amount};
     fetch('http://localhost:8200/paypal/donate', {

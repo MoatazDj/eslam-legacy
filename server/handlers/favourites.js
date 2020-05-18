@@ -1,5 +1,12 @@
 const connection = require ('../database/index');
 
+/**
+ * @function {getFavourite}-will get the favorite selected by the user from the database
+ * @param {req}-request recived from the client side
+ * @param {res}-response that will be send to the client side after checking the database
+ * @param {next}
+ */
+
 exports.getFavourite= async (req, res, next) => {
     try{
         const {id} = req.params
@@ -16,6 +23,13 @@ exports.getFavourite= async (req, res, next) => {
             res.send(e)
         }
 };
+
+/**
+ * @function {deleteFavourite}-will delete the favorite that the user selected from the database
+ * @param {req}-request recived from the client side
+ * @param {res}-response that will be send to the client side after checking the database
+ * @param {next}
+ */
 
 exports.deleteFavourite= async (req, res, next) => {
     try{

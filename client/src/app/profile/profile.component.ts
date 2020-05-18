@@ -14,6 +14,12 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * @function {getFavorites}-will the favorites that the user selected and send it to the favorites list component
+   * @param {void}
+   * @returns {void}
+   */
+
   getFavorites()  { 
     fetch(`http://localhost:8200/favourites/${this.user_id}` ,{
       method : 'GET',

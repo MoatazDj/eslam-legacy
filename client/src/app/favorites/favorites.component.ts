@@ -16,6 +16,12 @@ export class FavoritesComponent implements OnInit {
   ngOnInit(){
   }
 
+  /**
+   * @function {deleteFavorite}-will delete the verse from the favorites list 
+   * @param id - the verse id
+   * @returns - deletes the verse from the favorites list that the user selected
+   */
+
   deleteFavorite(id){
    console.log(id)
    fetch(`http://localhost:8200/favourites/${id}` ,{

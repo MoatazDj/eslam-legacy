@@ -19,6 +19,12 @@ export class VersesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * @function {addFavorites}-will add the favorites selected by the user to the favorites list component
+   * @param id - the verse id
+   * @returns {void}
+   */
+
  addFavorite(id){
    let verse ={
       verse_id : id,
@@ -35,6 +41,11 @@ export class VersesComponent implements OnInit {
     .then(data => {console.log(data)})
     .catch(err =>{console.log(err)})
   }
+  /**
+   * @function {handleClick}-function that will translte the verse selected by the user to english
+   * @param surah_number 
+   * @param verse_number 
+   */
   handleClick(surah_number, verse_number){ 
     
     this.httpClient.get(`http://api.mp3quran.net/api/aya?surah=${surah_number}&aya=${verse_number}&language=en`).subscribe(data => {

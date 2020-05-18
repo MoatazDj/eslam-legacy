@@ -19,6 +19,13 @@ export class LoginComponent implements OnInit {
     email : '',
     password : ''
   }
+
+  /**
+   * @function {onSubmit}-will submit the user info and check if the user exist or no, if so it will redirect him to the home page
+   * @param data - the user information 
+   * @returns {void}
+   */
+
   onSubmit(data:any) { 
     let user = data.value.user; 
     fetch('http://localhost:8200/auth/signin', {

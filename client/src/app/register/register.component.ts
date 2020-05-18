@@ -13,6 +13,13 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  /**
+   * @function {onSubmit}-will get the user information, send it to the server and save it into the data base 
+   * @param {data}- the user information
+   * @returns {void}
+   */
+
   user = {
     first_name : '',
     last_name : '',

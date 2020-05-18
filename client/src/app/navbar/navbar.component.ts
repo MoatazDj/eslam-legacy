@@ -11,6 +11,12 @@ export class NavbarComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
+  /**
+   * @function {logout}-will log the user out of the application 
+   * @param {void}
+   * @returns {void}
+   */
+
   logout() {
     this.authService.reset()
     this.token = undefined

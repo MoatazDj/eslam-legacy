@@ -1,5 +1,12 @@
 const connection = require ('../database/index');
 
+/**
+ * @function {getVerses}-will get the verses from the database based on the state that the user selected
+ * @param {req}-request recived from the client side
+ * @param {res}-response that will be send to the client side after checking the database
+ * @param {next}
+ */
+
 exports.getVerses= async (req, res, next) => {
     try{
         const {state} = req.params;
@@ -19,6 +26,14 @@ exports.getVerses= async (req, res, next) => {
             
         }
 };
+
+/**
+ * @function {insertFavorite}-will insert and sava the favorites that the user selectes in the table favorites in the database
+ * @param {req}-request recived from the client side
+ * @param {res}-response that will be send to the client side after checking the database
+ * @param {next}
+ */
+
 
 exports.insertFavorite= async (req, res, next) => {
     try{

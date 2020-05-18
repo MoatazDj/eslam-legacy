@@ -15,6 +15,12 @@ export class PrayerTimeComponent implements OnInit {
   ngOnInit(): void {
     
   }
+
+  /**
+   * @function {getPrayerTime}-will give the user the prayer time of the date that he selected
+   * @param {void}
+   * @returns {void}
+   */
   
   getPrayerTime(){
   
