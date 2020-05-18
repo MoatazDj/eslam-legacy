@@ -22,7 +22,18 @@ export class RegisterComponent implements OnInit {
   }
   onSubmit(data:any) :void { 
     let user = data.user; 
-    console.log(user);
-    console.log( this.httpClient.post<any>('http://localhost:8200/auth/signup', user).subscribe(res => console.log(res)))
+    fetch('http://localhost:8200/auth/signup', {
+      method : 'POST',
+      headers : {
+        'content-type':'application/json',
+      },
+      body : JSON.stringify(user) 
+    })
+    .then(res => {return res.json()})
+    .then(data => {
+      window.location.href = `http://localhost:4200/login`
+    })
+    .catch(err =>{console.log(err)})
+  
   }
 }
