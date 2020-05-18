@@ -1,5 +1,5 @@
+import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-states',
@@ -7,7 +7,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./states.component.css']
 })
 export class StatesComponent implements OnInit {
-
+  gender = this.authService.getGender()
   state;
   verses;
   constructor(private authService: AuthService) { }

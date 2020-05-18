@@ -32,6 +32,8 @@ export class LoginComponent implements OnInit {
     .then(data => {
       this.authService.setToken(data.token)
       this.authService.setId(data.user_id)
+      this.authService.setGender(data.gender)
+      window.location.href = `http://localhost:4200/profile`
     })
     .catch(err =>{console.log(err)})
   }
