@@ -4,7 +4,7 @@ const auth = require('../middlewares/auth');
 const handler = require ('../handlers')
 
 
-router.get('/', auth, handler.getFavourite);
+router.get('/', handler.getFavourite);
 router.delete('/:id', auth, handler.deleteFavourite);
 
 

@@ -2,6 +2,7 @@ const connection = require ('../database/index');
 
 exports.getFavourite= async (req, res, next) => {
     try{
+        console.log(req.user_id)
         var selectUserFavories = 'SELECT * FROM verses INNER JOIN users_verses ON verses.verse_id= users_verses.verse_id AND users_verses.user_id=?'
         connection.query(selectUserFavories, [req.body.user_id], (error, result) => {
             if (error) res.status(404).json('favorite not found')
@@ -11,7 +12,6 @@ exports.getFavourite= async (req, res, next) => {
     catch(e)
         {
             res.send(e)
-            
         }
 };
 
@@ -26,7 +26,6 @@ exports.deleteFavourite= async (req, res, next) => {
     }
     catch(e)
         {
-            res.send(e)
-            
+            res.send(e) 
         }
 };

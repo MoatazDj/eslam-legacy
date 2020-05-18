@@ -1,5 +1,5 @@
 const connection = require ('../database/index');
-const bcrypt = require ('bcrypt');
+const bcrypt = require ('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 exports.signup = async (req, res, next) => {
@@ -52,7 +52,6 @@ exports.signup = async (req, res, next) => {
     catch(e)
         {
                 res.send(e)
-            
         }
 };
 
@@ -81,9 +80,9 @@ exports.signin = async (req, res, next) => {
                         res.status(404).send('not valid password');
                     } else {              
                             console.log('Correct credientials');
-                            const {user_id, email} = user[0];
-                            const token = jwt.sign({user_id, email}, process.env.SECRET);
-                            res.status(200).json({user_id, email, token})
+                            const {user_id, email, gender} = user[0];
+                            const token = jwt.sign({user_id, email, gender}, process.env.SECRET);
+                            res.status(200).json({user_id, email, gender, token})
                         } 
                     }
                 }

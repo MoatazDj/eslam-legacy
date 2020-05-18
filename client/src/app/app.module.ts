@@ -19,6 +19,9 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RadioComponent } from './radio/radio.component';
 import { PartnerComponent } from './partner/partner.component';
+import { NgxAudioPlayerModule } from 'ngx-audio-player';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrayerTimeComponent } from './prayer-time/prayer-time.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,13 +37,16 @@ import { PartnerComponent } from './partner/partner.component';
     StatesComponent,
     FavoritesComponent,
     RadioComponent,
-    PartnerComponent
+    PartnerComponent,
+    PrayerTimeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxAudioPlayerModule,
+    BrowserAnimationsModule
   ],
   providers: [IslamicService],
   bootstrap: [AppComponent]

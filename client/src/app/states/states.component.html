@@ -3,17 +3,17 @@
 <div class = "row" >
     <div class="col">
       <div class="card" style="width:400px">
-         <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+         <img class="card-img-top" src="../../assets/emojis/angry.png" alt="Card image" style="width:100%">
          <div class="card-body">
-          <a href="#" class="btn btn-primary">Angry</a>
+          <button  class="btn btn-primary" (click)="getState('angry')">Angry</button>
          </div>
       </div>
     </div>
     <div class="col">
         <div class="card" style="width:400px">
-           <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+           <img class="card-img-top" src="../../assets/emojis/scared.png" alt="Card image" style="width:100%">
            <div class="card-body">
-            <a href="#" class="btn btn-primary">Stuck</a>
+            <button (click)="getState('scared')" class="btn btn-primary">Scared</button>
            </div>
         </div>
       </div>
@@ -21,17 +21,17 @@
 <div class = "row" >
     <div class="col">
       <div class="card" style="width:400px">
-         <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+         <img class="card-img-top" src="../../assets/emojis/sick.png" alt="Card image" style="width:100%">
          <div class="card-body">
-          <a href="#" class="btn btn-primary">Happy</a>
+          <button (click)="getState('sick')" class="btn btn-primary">Sick</button>
          </div>
       </div>
     </div>
     <div class="col">
         <div class="card" style="width:400px">
-           <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+           <img class="card-img-top" src="../../assets/emojis/stuck.png" alt="Card image" style="width:100%">
            <div class="card-body">
-            <a href="#" class="btn btn-primary">Sad</a>
+            <button (click)="getState('stuck')" class="btn btn-primary">Stuck</button>
            </div>
         </div>
       </div>
@@ -39,6 +39,6 @@
     <br>
 </div>
 
-<div class="container">
-    <app-verses></app-verses>
+<div>
+    <app-verses [verses] = "verses"></app-verses>
 </div>
