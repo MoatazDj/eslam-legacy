@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
 import { AuthService } from '../auth.service';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-verses',
   templateUrl: './verses.component.html',
@@ -12,7 +13,8 @@ export class VersesComponent implements OnInit {
   msbapTitle = 'Audio Title';
   msbapDisplayTitle = false; 
   msbapDisplayVolumeControls = true;
-  constructor( private authService: AuthService) { }
+  translationText;
+  constructor( private authService: AuthService, private httpClient:HttpClient) { }
 
   ngOnInit(): void {
   }
@@ -33,5 +35,13 @@ export class VersesComponent implements OnInit {
     .then(data => {console.log(data)})
     .catch(err =>{console.log(err)})
   }
+  handleClick(surah_number, verse_number){ 
+    
+    this.httpClient.get(`http://api.mp3quran.net/api/aya?surah=${surah_number}&aya=${verse_number}&language=en`).subscribe(data => {
+    console.log(data);  
+    this.translationText = data["ayah_text_lang"];
+    })
+  }
+
  }
 

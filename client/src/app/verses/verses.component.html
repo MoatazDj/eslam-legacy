@@ -6,6 +6,8 @@
             [displayTitle]="msbapDisplayTitle" [displayVolumeControls]="msbapDisplayVolumeControls" >
             </mat-basic-audio-player>
             <button (click)='addFavorite(verse.verse_id)'>Add to favorites</button>
+            <button (click)= "handleClick(verse.surah_number, verse.verse_number)" >English</button>
+            <p>{{translationText}}</p>
         </div>
     </div>
 </div>
