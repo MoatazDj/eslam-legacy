@@ -10,24 +10,26 @@ export class PrayerTimeComponent implements OnInit {
   prayers;
   model: NgbDateStruct;
   date: {year: number, month: number};
-
   constructor(private calendar: NgbCalendar) { }
 
   ngOnInit(): void {
-    this.getPrayerTime()
+    
   }
-
+  
   getPrayerTime(){
-    let date = new Date();
-    console.log(date)
-    let month = date.getMonth()+1;
-    fetch("http://api.aladhan.com/v1/calendarByCity?city=Tunis&country=Tunisia&method=2&month={{month}}&year=2020", {
+  
+    console.log(this.model);
+    let year = this.model.year
+    let day = this.model.day
+    let month = this.model.month;
+    console.log(month);
+    fetch("http://api.aladhan.com/v1/calendarByCity?city=Tunis&country=Tunisia&method=2&month={{month}}&year={{year}}", {
         method : 'GET'
       })
       .then(res => {return res.json()})
-      .then(data => {this.prayers = data.data.splice(0, 5)
-                      console.log(data)
-                    })
+      .then(data => {this.prayers = data.data[day-1]
+        console.log("data:", data);
+                    console.log(this.prayers)})
       .catch(err =>{console.log(err)})
     }
 
