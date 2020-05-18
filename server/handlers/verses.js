@@ -34,8 +34,8 @@ exports.insertFavorite= async (req, res, next) => {
     })
     }
     catch(e)
-        {
+        {                                                                                                                                                                                                                                                                                                                         
             res.send(e)
             
         }
-};
+};                                                                                                                                                                                                                                                                                                                                                          
